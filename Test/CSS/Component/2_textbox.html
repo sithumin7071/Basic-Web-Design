@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Box</title>
+    <style>
+        .box{
+            width: 450px;
+            border: 2px solid black;
+            padding: 10px 15px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .title{
+            font-family: sans-serif;
+            text-transform: uppercase;
+        }
+        .content{
+            color: brown;
+            text-align: justify;
+        }
+        .box-solid{
+            background-color: lightgray;
+            border: 2px solid lightgray;
+        }
+        .box-rounded{
+            border-radius: 50px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .text-center .content{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box text-center">
+        <h2 class="title">This is Base Box</h2>
+        <p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, perferendis dolore. Laboriosam obcaecati, reprehenderit consectetur, dicta, doloremque mollitia perferendis facere nisi perspiciatis molestias ullam earum libero nam aspernatur amet alias!</p>
+    </div>
+    <div class="box box-solid">
+        <h2 class="title">This is Solid Box</h2>
+        <p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, perferendis dolore. Laboriosam obcaecati, reprehenderit consectetur, dicta, doloremque mollitia perferendis facere nisi perspiciatis molestias ullam earum libero nam aspernatur amet alias!</p>
+    </div>
+    <div class="box box-rounded">
+        <h2 class="title">This is Rounded Box</h2>
+        <p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, perferendis dolore. Laboriosam obcaecati, reprehenderit consectetur, dicta, doloremque mollitia perferendis facere nisi perspiciatis molestias ullam earum libero nam aspernatur amet alias!</p>
+    </div>
+</body>
+</html>

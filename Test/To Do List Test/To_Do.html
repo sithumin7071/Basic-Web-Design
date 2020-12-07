@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="Style1.css">
+</head>
+<body>
+    <fieldset class="field-Box">
+        <legend class="box-Header">To Do List</legend>
+        <div class="todo">
+            <div class="add-Box" id="addBox">
+                <input type="text" id="input">
+                <button id="addBtn" onclick="addList()" class="btn add-btn">ADD</button>
+            </div>
+            <ol class="list" id="list">
+            </ol>
+        </div>
+        <script>
+            let minTextLength = 3;
+            let i = 1;
+    
+            let input = document.getElementById("input");
+            let list = document.getElementById("list");
+    
+            function textFilter(x) {
+                if(x){
+                    if(x.length >= minTextLength){
+                        return x;
+                    }else {
+                        alert("Minimun Text Length is 3");
+                        return false;
+                    }
+                }else {
+                    alert("Input Text is Empty");
+                    return false;
+                }
+            }
+    
+            function showList(text) {
+                list.innerHTML += `<li class="list-item" id="list${i}">
+                    <button class="btn del-btn" onclick="deleteList(${i})" >Delete</button>
+                    <button class="btn edt-btn" onclick="editList(${i})">Edit</button>
+                    <span id="listText${i}">${text}</span>
+                </li>`;
+                i++;
+            }
+    
+            function deleteList(listId) {
+                let current = document.getElementById(`list${listId}`);
+                let currentText = document.getElementById(`listText${listId}`).innerHTML;
+                let deleteConfirm = confirm(`Are You Sure Want To Delete LIST '${currentText}'!!!`);
+                if(deleteConfirm){
+                    list.removeChild(current);
+                } else{
+                    console.log("DELETE Canceled !!!")
+                }
+            }
+    
+            function editList(listId) {
+                let current = document.getElementById(`listText${listId}`);
+                let newText = prompt("Edit Your List",current.innerHTML);
+    
+                if(textFilter(newText)){
+                    current.innerHTML = newText;
+                }
+            }
+    
+            function addList() {
+                let inputText = textFilter(input.value);
+    
+                if(inputText){
+                    showList(inputText);
+                    input.value = "";
+                }
+    
+                console.log(inputText);
+    
+            }
+        </script>
+    </fieldset>
+    
+</body>
+</html>

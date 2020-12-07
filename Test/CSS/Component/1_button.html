@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Design</title>
+    <style>
+        .btn{
+            padding: 10px 10px;
+            border: 2px solid black;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin-bottom: 10px;
+            transition: 0.5s;
+        }
+        .btn:hover{
+            background: darkcyan;
+        }
+        .btn-solid{
+            background-color: gray;
+            color: greenyellow;
+        }
+        .btn-rounded{
+            border-radius: 5px;
+        }
+        .btn-rounded-circular{
+            border-radius: 50px;
+        }
+        .btn-blue{
+            background-color: darkblue;
+            color: white;
+            border: 2px solid darkblue;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Base Design</button>
+    <button class="btn btn-solid">Solid Design</button>
+    <button class="btn btn-rounded">Rounded Design</button>
+    <button class="btn btn-solid btn-rounded">Rounded Solid</button>
+    <button class="btn btn-rounded-circular">Rounded Circular</button>
+    <button class="btn btn-solid btn-rounded-circular">Circular Solid</button>
+    <button class="btn btn-blue btn-solid btn-rounded-circular">Circular Solid</button>
+</body>
+</html>

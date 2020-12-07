@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Query</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .test{
+            width: 350px;
+            background-color: brown;
+            margin-bottom: 10px;
+            padding: 7px 10px;
+            display: inline-block;
+            text-align: left;;
+        }
+        @media screen and (max-width: 1024px) {
+            .test{
+                width: 49%;
+                background-color: cyan;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .test{
+                width: fit-content;
+                background-color: darkblue;
+                color: white;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="test">
+        <h4>This is Media Query Testing</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, necessitatibus cum omnis ipsa qui, eveniet nisi aliquid dicta numquam commodi beatae est nesciunt amet quae alias repudiandae, voluptates officia tempore.</p>
+    </div>
+    <div class="test">
+        <h4>This is Media Query Testing</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, necessitatibus cum omnis ipsa qui, eveniet nisi aliquid dicta numquam commodi beatae est nesciunt amet quae alias repudiandae, voluptates officia tempore.</p>
+    </div>
+    <div class="test">
+        <h4>This is Media Query Testing</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, necessitatibus cum omnis ipsa qui, eveniet nisi aliquid dicta numquam commodi beatae est nesciunt amet quae alias repudiandae, voluptates officia tempore.</p>
+    </div>
+</body>
+</html>

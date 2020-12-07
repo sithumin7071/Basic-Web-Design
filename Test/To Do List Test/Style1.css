@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #a1eafb;
+}
+.field-Box{
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 10px;
+    border: 2px solid #071e3d;
+    background-color: #278ea5;
+    border-radius: 10px;
+}
+.box-Header{
+    text-align: center;
+    color: #071e3d;
+    font-size: 20px;
+    border: 2px solid #071e3d;
+    border-radius: 10px;
+    background-color: #278ea5;
+    text-decoration: solid;
+    font-weight: bold;
+}
+.todo{
+
+}
+.add-Box{
+
+}
+.btn{
+    background-color: #a1eafb;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: #fff98c;
+}
+.list li{
+    border: 1px solid #071e3d;
+    padding: 5px 5px 5px 5px;
+    
+}
+.list li:nth-child(odd) {
+    background: #a1eafb;
+}
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Loop</title>
+</head>
+<body>
+    <h1>JS Loop</h1>
+    <h2>Friut List</h2>
+    <ol>
+
+    </ol>
+    <script>
+
+        let arr = ["Apple","Orange","Banana","Mango","Grape"];
+
+        // for( let i = 0; i <= arr.length; i++){
+        //     document.querySelector("ol").innerHTML += `<li>${arr[i]}</li>`;
+        // }
+
+        // for(x in arr){
+        //     document.querySelector("ol").innerHTML += `<li>${arr[x]} => For in</li>`;
+        // }
+
+        // for(x of arr){
+        //     document.querySelector("ol").innerHTML += `<li>${x} => For of</li>`;
+        // }
+
+        // arr.map(function (el,index) {
+        //     document.querySelector("ol").innerHTML += `<li>${el}=>${index}</li>`;
+        // });
+    //     function showHello(max) {
+    //         for(i=0; i<=max; i++){
+    //             console.log(`${i}. Hello`);
+    //     }  
+    // }
+
+    let obj = {
+            name : "Sithu Min",
+            age : 24,
+            job : "IT",
+            status : false,
+            
+            // learn : function () {
+            //     console.log(`${this.name} can learn Web Design`);
+            // }
+        };
+
+    for(x in obj){
+        document.querySelector("ol").innerHTML += `<li>${x} => ${obj[x]}</li>`;
+    }
+
+    </script>
+</body>
+</html>

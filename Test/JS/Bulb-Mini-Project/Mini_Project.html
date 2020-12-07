@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Off/On</title>
+</head>
+<body>
+    <img src="pic_bulboff.gif" id="obj" alt="">
+
+    <!-- <button onclick="lightOn()">On</button>
+    <button onclick="lightOff()">Off</button> -->
+
+    <button onclick="control()">Control</button>
+
+    <script>
+
+        // function lightOn() {
+        //     img.src = "pic_bulbon.gif";
+        // }
+        // function lightOff() {
+        //     img.src = "pic_bulboff.gif";
+        // }
+
+        function control() {
+            let img = document.getElementById("obj");
+            let arr = img.src.split("/");
+            console.log(arr);
+            if(arr[arr.length-1] == "pic_bulboff.gif"){
+                img.src = "pic_bulbon.gif";
+            }else {
+                img.src = "pic_bulboff.gif";
+            }
+
+        }
+        
+
+    </script>
+</body>
+</html>

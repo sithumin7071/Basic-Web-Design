@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function and Arrow Function</title>
+</head>
+<body>
+    <h1>Function and Arrow Function</h1>
+    <button>Click Me</button>
+    <script>
+
+        // function one() {
+        //     console.log("This is one");   
+        // }
+
+        let one = () => console.log("This is Function one");
+
+        // function two() {
+        //     let x = "This is X";
+        //     console.log(x);
+        // }
+
+        let two = () => {
+            let x = "This is X";
+            console.log(x);
+        }
+
+        // function three(x) {
+        //     console.log(x);
+        // }
+
+        let three = x => console.log(x);
+
+        // function four(x,y=1) {
+        //     console.log({x,y});
+        // }
+
+        let four = (x, y=1) => console.log({x,y});
+
+        // document.querySelector("button").addEventListener("click",function () {
+        //     console.log("This is Five");
+        // });
+
+        document.querySelector("button").addEventListener("click",()=>console.log("This is Five Function"));
+
+        // (function () {
+        //     console.log("This is IIFE");
+        // })();
+
+        (()=>console.log("This is IIFE with arrow function"))();
+
+        let obj = {
+            name : "Sithu Min",
+            learn : function () {
+                console.log(`${this.name} can learn WEB Design`);
+            },
+            study : () => console.log(`${obj.name} can study Home Work`),
+
+        };
+
+    </script>
+</body>
+</html>

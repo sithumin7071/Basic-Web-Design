@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Everything is an object</h1>
+    <script>
+        let name = "Sithu Min";
+        let age = 24;
+        let arr = ["Sithu Min",24,"IT",false];
+        function test() {
+            console.log(name,age,arr);
+        } 
+        let obj = {
+            name : "Sithu Min",
+            age : 24,
+            job : "IT",
+            status : false,
+            
+            learn : function () {
+                console.log(`${this.name} can learn Web Design`);
+            }
+        };
+        class One{
+            constructor(width,height){
+                this.width = width;
+                this.height = height;
+            }
+        }
+        let one = new One(100,200);
+    </script>
+</body>
+</html>

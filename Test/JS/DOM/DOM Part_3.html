@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h1{
+            border: 2px solid black;
+            padding: 20px;
+            width: 255px;
+            margin-left: 25px;
+        }
+        div{
+            margin: 20px;
+        }
+        input{
+            width: 150px;
+            margin: 5px;
+            height: 30px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="result">Text</h1>
+    <div>
+        <input type="text" id="text" onkeyup="changeText()"><button id="setText">Set Text</button>
+    </div>
+    <div>
+        <input type="color" id="color" onchange="changeColor()"><button id="setColor">Set Color</button>
+    </div>
+    <div>
+        <input type="number" id="fontSize"><button id="setSize" onclick="changeFontSize()">Set FontSize</button>
+    </div>
+    <script>
+        let result = document.getElementById("result");
+        document.getElementById("setText").onclick = function () {
+            let x = document.querySelector("#text").value;
+            result.innerHTML = x;
+            console.log(`Change text to "${x}"`);
+        }
+        document.getElementById("setColor").addEventListener("click",function () 
+        {
+            let x = document.getElementById("color").value;
+            result.style.color = x;
+            console.log(`Change color to "${x}"`);
+        });
+        function changeFontSize() {
+            let x = document.getElementById("fontSize").value;
+            result.style.fontSize = x+"px";
+            console.log(`Change font size to "${x}px"`);
+        }
+        function changeColor() {
+            let x = document.getElementById("color").value;
+            result.style.color = x ;
+            console.log(`Change color to "${x}"`);
+        }
+        function changeText() {
+            let x = document.querySelector("#text").value;
+            result.innerHTML = x;
+            console.log(`Change text to "${x}"`);
+        }
+    </script>
+</body>
+</html>
